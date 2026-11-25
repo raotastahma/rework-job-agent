@@ -1,0 +1,10 @@
+{
+  "name": "rework-job-agent",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=24" },
+  "scripts": {
+    "demo": "node demo.mjs",
+    "test": "node --test test/digest.test.mjs"
+  }
+}
