@@ -19,7 +19,7 @@ npm run demo
 npm test
 ```
 
-The demo prints the Telegram overview and the first job card, including button actions. The scores, employers and links are fictional. The [digest renderer](digest.mjs) and its [tests](test/digest.test.mjs) come from the current bot. The example starts with the output of the matching stage, so it runs without a Telegram account, a model API key or anyone's CV.
+The demo prints the Telegram overview and the first job card, including button actions. The scores, employers and links are fictional. This release contains a snapshot of the Telegram pilot's [digest renderer](digest.mjs) and [tests](test/digest.test.mjs). It starts with an already assessed feed and runs locally. The hosted pilot also manages onboarding, search and scheduled delivery. Its English interface can fall back to neutral labels when a saved assessment lacks English text.
 
 One detail worth checking in the output: the first feed has two open roles and zero new ones. The bot establishes a baseline on the first search. Later digests can then distinguish a newly discovered vacancy from one the job seeker has already seen.
 
