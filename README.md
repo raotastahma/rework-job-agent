@@ -1,27 +1,54 @@
 # re:work | AI Job Search Agent
 
-re:work is a Telegram bot that matches open roles to a job seeker's professional profile and delivers a personalized job feed. I built it around a question that job boards leave to the applicant: which requirements can I already back up with experience, and which should I clarify?
+<img src="assets/rework-logo.png" alt="re:work" width="220">
 
-## From profile to job feed
 
-1. In Telegram, the job seeker describes their experience, target roles, locations and preferred delivery frequency.
-2. The agent searches company job boards and assesses roles against the professional profile. The feed distinguishes confirmed matches, potential matches and requirements that still need evidence.
-3. A Telegram digest summarizes changes. The job seeker can open a card, save a role or answer a question that improves the next assessment.
+Upload your CV and answer a few questions about your experience and preferences. re:work uses that profile to find vacancies on company career sites. Choose daily delivery to get newly discovered matches in Telegram. Assessed roles show an experience-match percentage or range, the evidence behind it, and requirements that still need clarification.
 
-## Try a fictional job search
+**[Start re:work in Telegram](https://t.me/CVBuilderCareerBot)**
 
-The example candidate has led cross-functional launches and built a reporting workflow. One fictional role fits that background. Another calls for direct management of analysts, which the candidate has yet to confirm. The digest keeps both the opportunity and the unanswered question visible.
+## Get your first shortlist
 
-With Node.js 24 or later, run these commands from the repository root. They work offline with Node's standard library.
+1. Open the bot in a private Telegram chat and press **Start**.
+2. Answer eight questions about locations, work authorization, work format, relocation, companies, roles, exclusions and digest frequency. Choose **1** for daily updates, or another positive number of days.
+3. Upload your CV as **PDF, DOCX, TXT or MD, up to 4 MiB**, paste its text, or send a readable professional-profile link. PDFs need selectable text. For a file or readable link, tap **Review source**, check the extracted text, then **Add to my professional profile**. If a link cannot be read, upload a file or paste the text.
+4. The first search starts once your experience is added. Your digest arrives in the same chat after search and assessment finish. Open a vacancy title to visit the employer, use **❤️** to save it, or open **Questions** to clarify missing experience.
+
+The bot builds a professional profile from your materials and answers. Follow-up questions help separate confirmed experience from gaps that still need evidence. **Best match** ranks assessed open roles; **Favourite vacancies** keeps your bookmarks. You can change preferences in the chat and use **Schedule** to set the search start time and time zone, change the interval, or pause updates. Delivery follows completion of each search.
+
+## What the result looks like
+
+An illustrative example using sample employers, scores and experience, with no personal data:
+
+> **First vacancy digest**<br>
+> Open: 2 · New: 0<br>
+> Confirmed fit: 1 · Potential fit: 1
+>
+> **Product Operations Lead · Harbor Example**<br>
+> Remote · Europe · Confirmed fit<br>
+> Experience coverage: **85–90%**<br>
+> Basis: The candidate has led two cross-functional launches and built a reporting workflow.
+>
+> **Product Analytics Manager · Orchard Example**<br>
+> Remote · Europe · Potential fit<br>
+> Experience coverage: **60–75%**<br>
+> Required condition: Direct management experience.<br>
+> Question: Have you directly managed a team of analysts?
+
+The percentage measures coverage of the vacancy's requirements by the professional profile. A range keeps unconfirmed experience visible. The first search establishes a baseline, so existing roles are shown with **New: 0**. Later digests distinguish newly found, reopened, reassessed and confirmed closed vacancies. Daily updates also flag a previously seen role when its status or assessment changes.
+
+## Explore the public code
+
+This repository contains a snapshot of the pilot's [Telegram digest renderer](digest.mjs), an illustrative example and [tests](test/digest.test.mjs). The running bot also handles onboarding, CV import, profile updates, vacancy discovery and scheduled searches. Its private runtime and user materials are not included here.
+
+With Node.js 24 or later, run from the repository root:
 
 ```sh
 npm run demo
 npm test
 ```
 
-The demo prints the Telegram overview and the first job card, including button actions. The scores, employers and links are fictional. This release contains a snapshot of the Telegram pilot's [digest renderer](digest.mjs) and [tests](test/digest.test.mjs). It starts with an already assessed feed and runs locally. The hosted pilot also manages onboarding, search and scheduled delivery. Its English interface can fall back to neutral labels when a saved assessment lacks English text.
-
-One detail worth checking in the output: the first feed has two open roles and zero new ones. The bot establishes a baseline on the first search. Later digests can then distinguish a newly discovered vacancy from one the job seeker has already seen.
+These commands run offline using Node's standard library. The demo renders an already assessed sample feed, including the overview, first job card and button actions.
 
 ## Roadmap
 
