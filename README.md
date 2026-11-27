@@ -1,7 +1,8 @@
 # re:work | AI Job Search Agent
 
-<img src="assets/rework-logo.png" alt="re:work" width="220">
-
+<p align="center">
+  <img src="assets/rework-logo.png" alt="re:work" width="340">
+</p>
 
 Upload your CV and answer a few questions about your experience and preferences. re:work uses that profile to find vacancies on company career sites. Choose daily delivery to get newly discovered matches in Telegram. Assessed roles show an experience-match percentage or range, the evidence behind it, and requirements that still need clarification.
 
@@ -18,24 +19,24 @@ The bot builds a professional profile from your materials and answers. Follow-up
 
 ## What the result looks like
 
-An illustrative example using sample employers, scores and experience, with no personal data:
+This example shows a daily update and two of the newly found jobs. The counts, employers and profile are sample data.
 
-> **First vacancy digest**<br>
-> Open: 2 · New: 0<br>
-> Confirmed fit: 1 · Potential fit: 1
+> **Vacancy update**<br>
+> Open: 1,421 · New: 136<br>
+> Confirmed fit: 43 · Potential fit: 93
 >
 > **Product Operations Lead · Harbor Example**<br>
-> Remote · Europe · Confirmed fit<br>
+> Remote · Europe · New · Confirmed fit<br>
 > Experience coverage: **85–90%**<br>
 > Basis: The candidate has led two cross-functional launches and built a reporting workflow.
 >
 > **Product Analytics Manager · Orchard Example**<br>
-> Remote · Europe · Potential fit<br>
+> Remote · Europe · New · Potential fit<br>
 > Experience coverage: **60–75%**<br>
 > Required condition: Direct management experience.<br>
 > Question: Have you directly managed a team of analysts?
 
-The percentage measures coverage of the vacancy's requirements by the professional profile. A range keeps unconfirmed experience visible. The first search establishes a baseline, so existing roles are shown with **New: 0**. Later digests distinguish newly found, reopened, reassessed and confirmed closed vacancies. Daily updates also flag a previously seen role when its status or assessment changes.
+The percentage measures how much of a vacancy's requirements the profile supports. A range shows where a follow-up answer could change the assessment. The first search establishes which roles are already open. Later digests report new openings and flag earlier vacancies that reopened, closed or received a new assessment.
 
 ## Explore the public code
 
