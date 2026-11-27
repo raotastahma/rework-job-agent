@@ -6,7 +6,7 @@
 
 Upload your CV and answer a few questions about your experience and preferences. re:work uses that profile to find vacancies on company career sites. Choose daily delivery to get newly discovered matches in Telegram. Assessed roles show an experience-match percentage or range, the evidence behind it, and requirements that still need clarification.
 
-**[Start re:work in Telegram](https://t.me/CVBuilderCareerBot)**
+**[Start re:work in Telegram](https://t.me/rework_job_agent)**
 
 ## Get your first shortlist
 
